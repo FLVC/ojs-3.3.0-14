@@ -189,6 +189,9 @@ class SearchHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function authors($args, $request) {
+		error_log("SearchHandler::authors");
+		$request->getDispatcher()->handle404();
+		return;
 		$this->validate(null, $request);
 		$this->setupTemplate($request);
 
